@@ -6,13 +6,23 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapView: View {
+    var place: Place
+    
+    @State var position: MapCameraPosition
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Map()
     }
 }
 
 #Preview {
-    MapView()
+    MapView(place: Place.previewPlaces[0],
+            position: .camera(MapCamera(
+                centerCoordinate: Place.previewPlaces[0].location,
+                distance: 1000,
+                heading: 250,
+                pitch: 80)))
 }

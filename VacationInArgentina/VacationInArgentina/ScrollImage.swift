@@ -24,5 +24,5 @@ struct ScrollImage: View {
 }
 
 #Preview {
-    ScrollImage(image: "buenosAires")
+    ScrollImage(image: "buenos aires")
 }
